@@ -1,3 +1,13 @@
 .main{
     min-height: 80vh;
+    display: flex;
+}
+
+.left-main{
+    width: 20vw;
+    height: 100%;
+}
+.right-main{
+    width: 80vw;
+    height: 100%;
 }
