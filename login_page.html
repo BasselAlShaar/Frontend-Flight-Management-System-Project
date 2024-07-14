@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="window">
-      <div class="nav_bar">
+      <div class="header">
         <div id="logo">
           <svg
             width="80"
@@ -40,32 +40,49 @@
             </defs>
           </svg>
         </div>
-        <div class="button" id="flight">Flight</div>
-        <div class="button" id="services">Services</div>
-        <div class="button" id="login">Login</div>
-        <div class="button" id="sign_up">Sign Up</div>
+        <div class="nav_bar">
+          <ul class="nav-bar-list">
+            <li class="nav-item"><a href="#">Flight</a></li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
+          </ul>
+        </div>
       </div>
+
       <div class="title">
-        <h1> Welcome Back! <br />
-        Ready for take off?</h1>
+        <h1>
+          Welcome Back! <br />
+          Ready for take off?
+        </h1>
       </div>
       <div class="login_card">
-        
         <div class="login">
-          <div class="email_or_user_name">Email or User Name : <input type="email"></div>
-          
-          <div class="password">Password : <input type="password"><div><a>Forgot Password?</a></div><br><a>Don't have an account? Sign Up.</a></div>
+          <div class="login_form"><div class="email_or_user_name">
+            Email or User Name : <input type="email" />
+          </div>
+
+          <div class="password">Password : <input type="password" /></div>
+          <div class="login-links">
+            <a href="#" class="forgot-password">Forgot Password?</a>
+            <a href="#" class="sign-up">Don't have an account? Sign Up.</a>
+          </div></div>
           
         </div>
+        <div class="spline"></div>
         <div class="spline"></div>
       </div>
       <div class="footer">
         <div class="contact_card">
           <div id="contact_us">Contact Us:</div>
           <div class="contact_info">
-            <div id="email">email@email.com</div>
-            <div id="phone">Phone Number:</div>
-            <div id="digits">+961 03 003 003</div>
+            <div class="email">
+              <div class="email-label">Email:</div>
+              <div class="email">email@example.com</div>
+            </div>
+            <div class="phone">
+              <div class="phone-label">Phone Number:</div>
+              <div class="digits">+961 03 003 003</div>
+            </div>
           </div>
         </div>
       </div>
