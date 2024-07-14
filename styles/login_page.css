@@ -1,0 +1,72 @@
+body {
+    font-family: 'Raleway';
+  }
+.window{
+    display: flex;
+    flex-direction: column;
+    height:500px;
+    min-height: 100vh;
+}
+.nav_bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo {
+    margin-right: auto; 
+    padding: 10px;
+  }
+  
+  .button {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .login_card{
+    display: flex;
+    flex-direction: column;
+  }
+  .login{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50%;
+   justify-content: center;
+   align-items: center;
+  }
+  
+
+  .title{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    
+   
+    margin: 20px;
+  }
+  .contact_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+  }
+  #contact_us{
+    padding: 10px;
+  }
+  .contact_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: center;
+    width: 50vh;
+    padding: 10px;
+  }
+
+  .footer{
+    display: flex;
+    height: 15%;
+    margin-top: auto;
+    
+    
+  }
