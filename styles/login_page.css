@@ -20,10 +20,14 @@ body {
   .button {
     padding: 10px;
     margin-right: 10px;
+    border-radius: 10px;
+    color: #ffff;
+    background-color: #1a73e8;
   }
   .login_card{
     display: flex;
-    flex-direction: column;
+    background-color: rgb(185, 191, 197);
+    
   }
   .login{
     display: flex;
@@ -32,9 +36,23 @@ body {
     width: 50%;
    justify-content: center;
    align-items: center;
+   background-color: #6788b4;
+   color:#ffff;
   }
   
-
+  .email_or_user_name{
+    padding: 10px;
+    
+  }
+  input{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .password{
+    padding: 10px;
+   
+  }
   .title{
     display: flex;
     height: 10vh;
@@ -50,6 +68,7 @@ body {
     align-items: flex-start;
     width: 100%;
     padding: 10px;
+    
   }
   #contact_us{
     padding: 10px;
@@ -68,5 +87,12 @@ body {
     height: 15%;
     margin-top: auto;
     
+    
+  }
+
+  .spline{
+    display: flex;
+    height: 50vh;
+    width: 50%;
     
   }
