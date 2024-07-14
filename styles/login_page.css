@@ -1,5 +1,8 @@
 body {
     font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 .window{
     display: flex;
@@ -10,6 +13,7 @@ body {
 .nav_bar {
     display: flex;
     align-items: center;
+    background-color: lightgray;
   }
   
   #logo {
@@ -20,6 +24,9 @@ body {
   .button {
     padding: 10px;
     margin-right: 10px;
+    background-color: #1a73e8;
+    color: #ffffff;
+    border-radius: 10px
   }
   .login_card{
     display: flex;
