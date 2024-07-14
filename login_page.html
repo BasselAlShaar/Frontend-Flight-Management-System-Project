@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/login_page.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +13,7 @@
 </head>
 <body>
     <div class="window">
-        <div class="nav_bar">
+        <div class="header">
             <div id="logo">
                 <svg width="80" height="72" viewBox="0 0 80 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_46_31)">
@@ -26,11 +27,15 @@
                     </defs>
                 </svg>
             </div>
-            <div class="button" id="flight">Flight</div>
-            <div class="button" id="services">Services</div>
-            <div class="button" id="login">Login</div>
-            <div class="button" id="sign_up">Sign Up</div>
+            <div class="nav-bar">
+                <ul class="nav-bar-list">
+                    <li class="nav-item"><a href="#">Flight</a></li>
+                    <li class="nav-item"><a href="#">Services</a></li>
+                    <li class="nav-item"><a href="#">Login</a></li>
+                </ul>
+            </div>
         </div>
+
         <div class="title">
             Welcome Back! <br />
             Ready for take off?
@@ -46,9 +51,14 @@
             <div class="contact_card">
                 <div id="contact_us">Contact Us:</div>
                 <div class="contact_info">
-                    <div id="email">email@email.com</div>
-                    <div id="phone">Phone Number:</div>
-                    <div id="digits">+961 03 003 003</div>
+                    <div class="email">
+                        <div class="email-label">Email:</div>
+                        <div class="email">email@example.com</div>
+                    </div>
+                    <div class="phone">
+                        <div class="phone-label">Phone Number:</div>
+                        <div class="digits">+961 03 003 003</div>
+                    </div>
                 </div>
             </div>
         </div>
