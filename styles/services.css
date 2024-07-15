@@ -82,7 +82,8 @@ main {
 }
 
 .animation-placeholder {
-    background-color: #4d8b7d;
+    /* background-color: #4d8b7d; */
+    background-color: #caf4ff;
     width: 300px;
     height: 300px;
     display: flex;

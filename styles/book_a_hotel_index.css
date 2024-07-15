@@ -101,7 +101,10 @@ form {
     display: flex;
     flex-direction: column;
 }
-
+.form-group-cancellation{
+    display: flex;
+    
+}
 .form-group.inline {
     display: flex;
     align-items: center;

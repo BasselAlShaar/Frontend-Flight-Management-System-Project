@@ -114,8 +114,10 @@ form {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #4d8b7d; /* Same background color as .animation-placeholder */
+    background-color: #4d8b7d; 
     color: #fff; /* Text color to contrast with the background */
+    /* background-color:#d1e8e4; */
+     /* #ADD8E6; */
 }
 
 .search-btn {
@@ -142,4 +144,11 @@ footer {
     width: 20px;
     height: 20px;
     margin: 0 10px;
+}
+.form-group-driver-age{
+    display: flex;
+}
+.btn{
+    background-color:#07489d;
+    color:#4d8b7d;
 }
