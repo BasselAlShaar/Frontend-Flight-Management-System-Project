@@ -39,7 +39,7 @@ body {
 .nav-item > a {
   text-decoration: none;
   color: white;
-  background-color: #1a73e8;
+  background-color: #5ab2ff;
   border-radius: 10px;
   padding: 10px 20px;
 }
@@ -143,16 +143,19 @@ input {
   display: flex;
   flex-direction: column;
 }
-.login_button>a{
+button{
   text-decoration: none;
   color: white;
-  background-color: #1a73e8;
+  background-color: #5ab2ff;
   border-radius: 10px;
   padding: 10px 20px;
-  ;
+  cursor: pointer;
+  
 
 }
-
+button:hover{
+  background-color: #07489d;
+}
 .login_button{
   display: flex;
   
