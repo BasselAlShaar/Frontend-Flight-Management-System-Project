@@ -1,13 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9; /* Soft background color */
 }
 
 header {
-    background-color: #fff;
+    background-color: #0a1f44; /* Deep blue for the header */
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -38,7 +39,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #ffd700; /* Gold color for links */
     font-weight: bold;
 }
 
@@ -52,7 +53,6 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 .booking-section {
@@ -65,7 +65,8 @@ main {
 }
 
 .booking-section .btn {
-    background-color: #ddd;
+    background-color: #0a1f44; /* Deep blue for buttons */
+    color: #ffffff; /* White text */
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -73,6 +74,11 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.booking-section .btn:hover {
+    background-color: #2a497b; /* Even lighter blue on hover */
 }
 
 .animation-section {
@@ -82,22 +88,22 @@ main {
 }
 
 .animation-placeholder {
-    /* background-color: #4d8b7d; */
-    background-color: #caf4ff;
+    background-color: #1f4068; /* Darker blue for placeholders */
     width: 300px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #ffffff;
     font-size: 16px;
     text-align: center;
 }
 
 footer {
-    background-color: #f5f5f5;
+    background-color: #0a1f44; /* Deep blue for the footer */
     padding: 20px 0;
     text-align: center;
+    color: #ffffff; /* White text */
 }
 
 .contact-info p {
