@@ -63,8 +63,11 @@ body {
 }
 
 .email_or_user_name {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  align-self: flex-end;
+  align-items: center;
+
 }
 input {
   border-radius: 10px;
@@ -72,9 +75,10 @@ input {
   margin: 10px;
 }
 .password {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-
-  align-self: flex-end;
+  align-items: center;
 }
 .title {
   display: flex;
