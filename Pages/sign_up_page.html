@@ -6,14 +6,14 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="/Frontend-Flight-Management-System-Project/styles/sign-up-page.css"
+      href="/styles/sign-up-page.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+      <script src="/scripts/sign_up_page.js"></script>
   </head>
   <body>
     <div class="window">
@@ -60,16 +60,19 @@
       </div>
       <div class="login_card">
         <div class="login">
-          <div class="login_form">
-            <div class="name">Name : <input type="password" /></div>
-            <div class="user_name">User Name : <input type="user_name" /></div>
-            <div class="user-email">
-              Email : <input type="email" />
+          <form id="sign_up_form" class="sign_up_form">
+            <div  class="name">Name : <input id="name" type="text" /></div>
+            <div  class="user_name">User Name : <input id="user_name" type="user_name" /></div>
+            <div  class="user-email">
+              Email : <input id="user_email" type="email" />
             </div>
 
-            <div class="password">Password : <input type="password" /></div>
-          
+            <div  class="password">Password : <input id="password" type="password" autocomplete="off"/></div>
+          <div class="sign_up_button">
+            <button type="submit">Sing Up</button>
           </div>
+          </div>
+        </form>
         </div>
         <div class="spline"></div>
       </div>

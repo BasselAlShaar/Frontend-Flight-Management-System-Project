@@ -39,7 +39,7 @@ body {
 .nav-item > a {
   text-decoration: none;
   color: white;
-  background-color: #1a73e8;
+  background-color: #5ab2ff;
   border-radius: 10px;
   padding: 10px 20px;
 }
@@ -147,7 +147,25 @@ input {
   text-decoration: underline;
 }
 
-.login_form {
+.sign_up_form {
   display: flex;
   flex-direction: column;
+}
+button{
+  text-decoration: none;
+  color: white;
+  background-color: #5ab2ff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-end;
+
+
+}
+button:hover{
+  background-color: #07489d;
+}
+.sign_up_button{
+  display: flex;
+  align-self:center;
 }
