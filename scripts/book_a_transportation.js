@@ -52,13 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function displaySearchResults(results) {
     // Implement this function to display the search results on your page
-    const resultsContainer = document.createElement('div');
-    resultsContainer.classList.add('results-container');
+    const resultsContainer = document.querySelector('.results-container');
+    resultsContainer.innerHTML = ''; // Clear previous results if any
     results.forEach(result => {
         const resultItem = document.createElement('div');
         resultItem.classList.add('result-item');
         resultItem.innerText = `Transportation from ${result.pickupLocation} on ${result.pickupDate}`;
         resultsContainer.appendChild(resultItem);
     });
-    document.body.appendChild(resultsContainer);
 }
