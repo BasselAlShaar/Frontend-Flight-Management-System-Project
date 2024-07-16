@@ -1,10 +1,10 @@
 body {
   font-family: "Raleway";
-
 }
 .window {
   display: flex;
   flex-direction: column;
+
   min-height: 100vh;
 }
 .header {
@@ -62,7 +62,15 @@ body {
   color: #ffff;
 }
 
-.email_or_user_name {
+.user-email {
+  padding: 10px;
+  align-self: flex-end;
+}
+.user_name {
+  padding: 10px;
+  align-self: flex-end;
+}
+.name {
   padding: 10px;
   align-self: flex-end;
 }
@@ -88,7 +96,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  height:10vh;
+  height: 10vh;
   width: 100%;
   background-color: lightgray;
   gap: 10px;
@@ -99,14 +107,14 @@ input {
 }
 .contact_info {
   display: flex;
+ 
 
   gap: 20px;
   padding: 0px 20px;
 }
 
-.phone {
-  gap: 5px;
-}
+
+
 
 .footer {
   display: flex;
@@ -131,15 +139,15 @@ input {
 
 .login-links a {
   text-decoration: none;
-  color: #000; /* Customize the color as needed */
-  margin-bottom: 5px; /* Space between the links */
+  color: #000;
+  margin-bottom: 5px; 
 }
 
 .login-links a:hover {
   text-decoration: underline;
 }
 
-.login_form {
+.sign_up_form {
   display: flex;
   flex-direction: column;
 }
@@ -150,13 +158,14 @@ button{
   border-radius: 10px;
   padding: 10px 20px;
   cursor: pointer;
-  
+  align-self: flex-end;
+
 
 }
 button:hover{
   background-color: #07489d;
 }
-.login_button{
+.sign_up_button{
   display: flex;
-  
+  align-self:center;
 }

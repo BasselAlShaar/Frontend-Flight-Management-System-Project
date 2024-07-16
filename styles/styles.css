@@ -79,17 +79,43 @@ body {
     align-items: center; /* Center content horizontally */
     gap: 5px;
 }
+.phone{
+    display: flex;
+    gap: 5px;
+}
+
+
+.footer {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    color: black; 
+    text-align: left; 
+}
+
+.contact_card {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact_us {
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+.email, .phone {
+    display: flex;
+}
 
 .email-label, .phone-label {
     font-weight: bold;
-    color: #ffd700; /* Gold color for labels */
+    margin-right: 5px; 
 }
 
-.digits {
-    color: #ffffff; /* White color for digits */
-}
-
-.contact_info div {
-    font-size: 1em;
-    color: #ffffff; /* White text */
-}
