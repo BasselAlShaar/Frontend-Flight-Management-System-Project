@@ -63,16 +63,22 @@ body {
 }
 
 .user-email {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  align-self: flex-end;
+  align-items: center;
 }
 .user_name {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  align-self: flex-end;
+  align-items: center;
 }
 .name {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-  align-self: flex-end;
+  align-items: center;
 }
 input {
   border-radius: 10px;
@@ -80,9 +86,10 @@ input {
   margin: 10px;
 }
 .password {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
-
-  align-self: flex-end;
+  align-items: center;
 }
 .title {
   display: flex;
@@ -98,9 +105,10 @@ input {
   align-items: start;
   height: 10vh;
   width: 100%;
-  background-color: lightgray;
+  background-color: #0a1f44;
   gap: 10px;
   margin-top: auto;
+  color: white;
 }
 #contact_us {
   padding: 0px 20px;
