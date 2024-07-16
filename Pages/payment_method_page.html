@@ -6,7 +6,7 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="/Frontend-Flight-Management-System-Project/styles/payment_method_page.css"
+      href="/styles/payment_method_page.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="/scripts/payment_method_page.js"></script>
   </head>
   <body>
     <div class="window">
@@ -59,16 +60,16 @@
       </div>
       <div class="login_card">
         <div class="login">
-          <div class="login_form">
-            <div class="card-no">Credit/Debit Card No : <input type="number" /></div>
-            <div class="expiration-date">Expiration Date : <input type="date" /></div>
-            <div class="cvv">
-              cvv : <input type="number" />
-            </div>
-
-            <div class="card-holder-name">Card Holder's Name : <input type="text" /></div>
-          
-          </div>
+          <form id="payment_method_form" class="payment_method_form">
+            <div class="card-no">Credit/Debit Card No : <input id="card_no" type="number" /></div>
+            <div class="expiration-date">Expiration Date : <input id="expiration_date" type="date" /></div>
+            <div class="cvv">cvv : <input id="cvv" type="number" /></div>
+            <div class="card-holder-name">Card Holder's Name : <input id="card_holder_name" type="text" /></div>
+               <div class="login_button">
+                <button type="submit">Next</button><button type="button">Skip</button>
+              </div>
+            
+            </form>
         </div>
         <div class="spline"></div>
       </div>
