@@ -16,4 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('Password:', password);
 
     });
+    document.getElementById('logo').addEventListener('click', function() {
+        window.location.href = '../index.html'; 
+    });
 });

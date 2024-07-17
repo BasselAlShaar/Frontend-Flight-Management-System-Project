@@ -60,4 +60,8 @@ function displaySearchResults(results) {
         resultItem.innerText = `Transportation from ${result.pickupLocation} on ${result.pickupDate}`;
         resultsContainer.appendChild(resultItem);
     });
+    
 }
+document.getElementById('logo').addEventListener('click', function() {
+    window.location.href = '../index.html'; 
+});

@@ -177,3 +177,6 @@ button:hover{
   display: flex;
   align-self:center;
 }
+#logo{
+  cursor: pointer;
+}

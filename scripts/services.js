@@ -5,3 +5,6 @@ document.getElementById('book-hotel-btn').addEventListener('click', function() {
 document.getElementById('book-transportation-btn').addEventListener('click', function(){
     window.location.href = 'book_a_transportation.html';
 });
+document.getElementById('logo').addEventListener('click', function() {
+    window.location.href = '../index.html'; 
+});

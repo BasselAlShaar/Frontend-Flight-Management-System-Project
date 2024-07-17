@@ -89,5 +89,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   backButton.addEventListener('click', () => {
     window.location.href = 'admin_dashboard.html'; // Replace with your dashboard page URL
   });
+  
 
   });
+  document.getElementById('logo').addEventListener('click', function() {
+    window.location.href = '../index.html'; 
+});

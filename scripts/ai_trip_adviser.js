@@ -61,3 +61,6 @@ document.querySelector('form').addEventListener('submit', async function(event) 
         alert('An error occurred while searching. Please try again.');
     }
 });
+document.getElementById('logo').addEventListener('click', function() {
+    window.location.href = '../index.html'; 
+});
