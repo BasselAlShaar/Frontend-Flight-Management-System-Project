@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="/styles/sign-up-page.css"
-    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/admin_dashboard.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"/>
-      <script src="/scripts/sign_up_page.js"></script>
+      rel="stylesheet"
+    />
+    <script src="/scripts/admin_dashboard.js"></script>
   </head>
   <body>
     <div class="window">
@@ -45,53 +44,74 @@
         </div>
         <div class="nav_bar">
           <ul class="nav-bar-list">
-            <li class="nav-item"><a href="flights.html">Flight</a></li>
-            <li class="nav-item"><a href="services.html">Services</a></li>
-            <li class="nav-item"><a href="login_page.html">Login</a></li>
+            <li class="nav-item"><a href="#">Flight</a></li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item"><a href="#">Login</a></li>
           </ul>
         </div>
       </div>
 
       <div class="title">
         <h1>
-          Welcome! <br />
-          Let's get you started.
+          Welcome Admin 
         </h1>
       </div>
       <div class="login_card">
+        
         <div class="login">
-          <form id="sign_up_form" class="sign_up_form">
-            <div  class="name">Name : <input id="name" type="text" /></div>
-            <div  class="user_name">User Name : <input id="user_name" type="user_name" /></div>
-            <div  class="user-email">
-              Email : <input id="user_email" type="email" />
+       
+          <div class="buttons">
+            <div class="users">
+              <button id="users" type="button">Users</button>
             </div>
-
-            <div  class="password">Password : <input id="password" type="password" autocomplete="off"/></div>
-          <div class="sign_up_button">
-            <button type="submit">Login</button>
+            <div class="flights">
+              <button id="flights" type="button">Flights</button>
+            </div>
+            <div class="airlines">
+              <button id="airlines" type="button">Airline</button>
+            </div>
+            <div class="hotels">
+              <button id="hotels" type="button">Hotels</button>
+            </div>
+            <div class="taxies">
+              <button id="taxies" type="button">Taxies</button>
+            </div>
+            <div class="airports">
+              <button id="airports" type="button">Airports</button>
+            </div>
+            <div class="locations">
+              <button id="locations" type="button">Location</button>
+            </div>
           </div>
-          </div>
-        </form>
-        </div>
-
-     
+          </div><div class="dashboard">
+            <div class="message"><h2>Search For Airlines</h2> </div> 
     
-    <div class="footer">
-      <div class="contact_card">
-        <div id="contact_us">Contact Us:</div>
-        <div class="contact_info">
-          <div class="email">
-            <div class="email-label">Email:</div>
-            <div class="email">email@example.com</div>
+        <form id="searchForm" class="searchForm">
+          <label for="searchTerm">Search:</label>
+          <input type="text" id="searchTerm" name="searchTerm" placeholder="Enter search term...">
+          <input type="submit" value="Search">
+          <div class="back-button">
+            <button id="backButton" type="button">Back</button>
           </div>
-          <div class="phone">
-            <div class="phone-label">Phone Number:</div>
-            <div class="digits">+961 03 003 003</div>
-          </div></div> </div>
+  </div>
+    </div>
+      <div class="footer">
+        <div class="contact_card">
+          <div id="contact_us">Contact Us:</div>
+          <div class="contact_info">
+            <div class="email">
+              <div class="email-label">Email:</div>
+              <div class="email">email@example.com</div>
+            </div>
+            <div class="phone">
+              <div class="phone-label">Phone Number:</div>
+              <div class="digits">+961 03 003 003</div>
+            </div>
+        </div>
+        </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

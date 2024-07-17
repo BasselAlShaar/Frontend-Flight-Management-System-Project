@@ -90,9 +90,10 @@ input {
   align-items: start;
   height:10vh;
   width: 100%;
-  background-color: lightgray;
+  background-color: #0a1f44;
   gap: 10px;
   margin-top: auto;
+  color: #ffffff;
 }
 #contact_us {
   padding: 0px 20px;
