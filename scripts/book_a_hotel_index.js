@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please fill out all fields.');
             event.preventDefault();
         }
+        const insert = async ()=>{
+            
+        }
     });
 });
 
@@ -61,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rating = Array.from(document.querySelectorAll('.star.selected')).map(star => star.dataset.value);
         
         // Construct the request URL with query parameters
-        const url = `../Backend-Flight-Management-System-Project/locations/readall.php`;
+        const url = `../../../locations/readall.php`;
         
         try {
             // Fetch data from backend
@@ -73,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Received data from backend:', data);
             // Example: Update DOM with search results
             displaySearchResults(data); // Implement this function to display results
+            console.log(data);
         } catch (error) {
             console.error('Error fetching data:', error);
             // Handle errors (show error message, retry options, etc.)
@@ -94,17 +98,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Function to display search results (example)
-    function displaySearchResults(data) {
-        // Example: Update DOM with search results
-        // Replace with your logic to update HTML based on backend response
-        // For example, update a results section with data returned from backend
-        // Example assuming you have a results div with id 'search-results'
+
+    const dest = async ()=>{
+        const request = await fetch('../../../locations/readall.php',{
+            method:"POST"
+        })
+        let results = await request.json()
         const resultsContainer = document.getElementById('destination');
-        resultsContainer.innerHTML = ''; // Clear previous results
-        data.forEach(result => {
+        console.log(results);
+        results.locations.forEach(result => {
             let option = `<option value="${result.id_location}">${result.name}</option>`;
             resultsContainer.innerHTML += option;
-        });
+        })
     }
+    dest()
+    // document.getElementById('registration-form').addEventListener('submit', async function(event) {
+    //     event.preventDefault();
+    //     const formData = new FormData(event.target);
+    //         const request = await fetch('signup.php', {
+    //             method: 'POST',
+    //             body: formData
+    //         })
+    //         // console.log( await request.text())
+    //         let result = await request.json();
+    //         console.log(result)
+    // });
+    
 });
