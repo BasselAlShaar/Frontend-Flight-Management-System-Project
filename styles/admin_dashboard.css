@@ -29,6 +29,7 @@ body {
   }
   
   .nav-bar-list {
+   
     display: flex;
     justify-content: end;
     align-items: center;
@@ -37,6 +38,7 @@ body {
   }
   
   .nav-item > a {
+    display: none;
     text-decoration: none;
     color: white;
     background-color: #5ab2ff;
@@ -127,15 +129,18 @@ body {
     width: 50vh;
  }
 .dashboard{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
- .sign_up_form{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+
+}
+
+ .create_form{
+    display: flex;
+    flex-wrap: wrap;
     align-items: space-between;
-    align-self: center;
  }
  .name{
     display: flex;
@@ -155,7 +160,7 @@ body {
     flex-direction: column;
     align-items: center;}
 
-.sign_up_button{
+.create_button{
     display: flex;
     justify-content: center;
 }
@@ -163,4 +168,22 @@ input {
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
+  }
+  .searchForm{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .query{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-button{
+    display: flex;
+    align-self: center;}
+    
+  .message{
+    align-self: center;
   }
