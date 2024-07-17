@@ -1,7 +1,6 @@
 body {
     font-family: 'Raleway';
-    margin: 0;  
-    padding: 0;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -92,7 +91,9 @@ body {
 
 .contact_card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Change to row to align items horizontally */
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: center; /* Center align items vertically */
 }
 
 #contact_us {
@@ -102,12 +103,13 @@ body {
 
 .contact_info {
     display: flex;
-    flex-direction: column; 
-    gap: 5px; 
+    flex-direction: row; /* Align email and phone next to each other */
+    gap: 20px; /* Adjust gap as needed */
 }
 
 .email, .phone {
     display: flex;
+    flex-direction: column; /* Keep labels and content vertical */
 }
 
 .email-label, .phone-label {

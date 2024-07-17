@@ -164,6 +164,9 @@ footer {
 
 .contact-info p {
     margin: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
 }
 
 .social-icons img {

@@ -105,16 +105,36 @@ main {
 footer {
     background-color: #0a1f44; /* Deep blue for the footer */
     padding: 20px 0;
-    text-align: center;
     color: #ffffff; /* White text */
+    text-align: center;
 }
 
-.contact-info p {
-    margin: 5px 0;
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.social-icons img {
-    width: 20px;
-    height: 20px;
-    margin: 0 10px;
+.contact_card {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.contact_info {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.email, .phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-label, .phone-label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
