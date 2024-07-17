@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Send the data to the backend
-        fetch('http://localhost:3000/search-transportation', { // Update the URL to your backend endpoint
+        fetch('http://localhost:3000/search-transportation', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

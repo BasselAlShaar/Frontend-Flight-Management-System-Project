@@ -18,7 +18,7 @@ document.querySelector('form').addEventListener('submit', async function(event) 
         destination: destination,
         days: days,
         budget: budget
-        
+
     };
 
     try {
@@ -38,24 +38,11 @@ document.querySelector('form').addEventListener('submit', async function(event) 
         // Parse the JSON response
         const results = await response.json();
 
-        // Display the search results
-        let resultsHtml = '<h2>Search Results</h2>';
-        if (results.length > 0) {
-            results.forEach(result => {
-                resultsHtml += `
-                    <div>
-                        <p>Destination: ${result.destination}</p>
-                        <p>Budget: $${result.budget}</p>
-                        <p>Available From: ${result.availableFrom}</p>
-                        <p>Available To: ${result.availableTo}</p>
-                    </div>
-                    <hr>
-                `;
-            });
-        } else {
-            resultsHtml += '<p>No results found.</p>';
-        }
-        document.getElementById('results').innerHTML = resultsHtml;
+        // Save the results to localStorage
+        localStorage.setItem('searchResults', JSON.stringify(results));
+
+        // Redirect to the results page
+        window.location.href = 'ai_trip_advisor_result.html';
     } catch (error) {
         console.error('Error:', error);
         alert('An error occurred while searching. Please try again.');

@@ -44,13 +44,12 @@ document.getElementById('book-transportation-btn').addEventListener('click', fun
 });
 
 //search button 
-// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Select the search button
     const searchButton = document.querySelector('.search-btn');
 
     // Add a click event listener to the search button
-    searchButton.addEventListener('click', (event) => {
+    searchButton.addEventListener('click', async (event) => {
         event.preventDefault(); // Prevent the form from submitting the default way
         
         // Get the form values
@@ -61,10 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const freeCancellation = document.getElementById('free-cancellation').checked;
         const rating = Array.from(document.querySelectorAll('.star.selected')).map(star => star.dataset.value);
         
-        // Display an alert with the form values (for demonstration purposes)
-        alert(`Destination: ${destination}\nCheck In: ${checkin}\nCheck Out: ${checkout}\nGuests: ${guests}\nFree Cancellation: ${freeCancellation}\nRating: ${rating.join(', ')}`);
-
-        // Here you can add the code to handle the form submission, such as sending the data to a server or redirecting to another page with query parameters
+        // Construct the request URL with query parameters
+        const url = `http://localhost:3000/search?destination=${destination}&checkin=${checkin}&checkout=${checkout}&guests=${guests}&freeCancellation=${freeCancellation}&rating=${rating.join(',')}`;
+        
+        try {
+            // Fetch data from backend
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            
+            // Parse JSON response
+            const data = await response.json();
+            
+            // Handle the data (update DOM, show results, etc.)
+            console.log('Received data from backend:', data);
+            // Example: Update DOM with search results
+            displaySearchResults(data); // Implement this function to display results
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            // Handle errors (show error message, retry options, etc.)
+        }
     });
 
     // Add click event listeners to the stars for rating selection
@@ -81,4 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Function to display search results (example)
+    function displaySearchResults(data) {
+        // Example: Update DOM with search results
+        // Replace with your logic to update HTML based on backend response
+        // For example, update a results section with data returned from backend
+        // Example assuming you have a results div with id 'search-results'
+        const resultsContainer = document.getElementById('search-results');
+        resultsContainer.innerHTML = ''; // Clear previous results
+        data.forEach(result => {
+            const resultElement = document.createElement('div');
+            resultElement.textContent = `Result: ${result.title}, ${result.description}`;
+            resultsContainer.appendChild(resultElement);
+        });
+    }
 });
