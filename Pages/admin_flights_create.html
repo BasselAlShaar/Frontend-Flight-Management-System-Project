@@ -86,23 +86,21 @@
           </div><div class="dashboard">
             <div class="message"><h2>Create Flights</h2> </div> 
     
-        <form id="create_form" class="create_form">
-            <div  class="query">Flight No : <input id="name" type="number" /></div>
-            <div  class="query">Departure from Airport: <input id="Departure_airport" type="text" /></div>
-            <div  class="query">Arrival to Airport: <input id="Arrival_airport" type="text" />
+        <form id="create_flight" class="create_form">
+            <div  class="query">Flight No : <input name="flight_no" id="Flight_no" type="number" /></div>
+            <div  class="query">Departure from Airport: <input name="departure_airport" id="Departure_airport" type="text" /></div>
+            <div  class="query">Arrival to Airport: <input name="arrival_airport" id="Arrival_airport" type="text" />
             </div>
-            <div  class="query">Departure Time : <input id="Departure_time" type="time" />
+            <div  class="query">Departure Time : <input name="departure_time" id="Departure_time" type="time" />
             </div>
-            <div  class="query">Arrival Time: <input id="Arrival_time" type="time" />
+            <div  class="query">Arrival Time: <input name="arrival_time" id="Arrival_time" type="time" />
             </div>
-            <div  class="query">Price : <input id="Price" type="number" />
+            <div  class="query">Price : <input name="price" id="Price" type="number" />
             </div>
-            <div  class="query">Total seats : <input id="Total seats" type="number" />
+            <div  class="query">Total seats : <input name="total-seats" id="Total seats" type="number" />
             </div>
-            <div  class="query">Airlines : <input id="Airline" type="text" />
+            <div  class="query">Airlines : <input name="airline" id="Airline" type="text" />
             </div>
-
-            <div  class="query">Password : <input id="password" type="password" autocomplete="off"/></div>
           <div class="create_button">
             <button type="submit">Create</button>
           </div>
