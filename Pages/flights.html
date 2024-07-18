@@ -31,39 +31,22 @@
         </div>
         <div class="nav-bar">
             <ul class="nav-bar-list">
-                <li class="nav-item"><a href="#">Flight</a></li>
-                <li class="nav-item"><a href="#">Services</a></li>
-                <li class="nav-item"><a href="#">Login</a></li>
+                <li class="nav-item"><a href="flights.html">Flight</a></li>
+            <li class="nav-item"><a href="services.html">Services</a></li>
+            <li class="nav-item"><a href="login_page.html">Login</a></li>
             </ul>
         </div>
     </div>
 
     <div class="container">
-        <div class="search-bar">
-
-            <input type="text" id="from" placeholder="From Country" class="rounded-left">
-            <input type="text" id="to" placeholder="To Country">
-            <input type="date" id="depart" placeholder="Depart Date">
-            <input type="date" id="return" placeholder="Return Date" class="rounded-right">
-            <button id="search-button">Search</button>
-        </div>
+            <form action="" class="search-bar" id="form">
+                <input type="text" id="from" placeholder="From Country" class="rounded-left" name="dep_country">
+                <input type="text" id="to" placeholder="To Country" name="arr_country">
+                <input type="date" id="depart" placeholder="Depart Date" class="rounded-right" name="departure_time">
+                <button id="search-button" value="save" type="submit">Search</button>
+            </form>
 
         <div class="flight-list">
-            <div class="flight-item">
-                <div class="flight-details">
-                    <div class="airline-logo"><img src="./Middle_East_Airlines-Logo.wine.png" alt="" height="60px">
-                    </div>
-                    <div class="time-airline">
-                        <div class="airline">Delta Air Lines</div>
-                    </div>
-                    <div class="flight-number">DL 1234</div>
-                    <div class="departure-time">10:00 AM - <span>1:00 PM</span></div>
-                </div>
-                <div class="right-section">
-                    <div class="price">$350</div>
-                    <button class="book-button">Book Now</button>
-                </div>
-            </div>
 
             <div class="flight-item">
                 <div class="flight-details">
@@ -81,24 +64,6 @@
                 </div>
             </div>
 
-            <div class="flight-item">
-                <div class="flight-details">
-                    <div class="airline-logo"><img src="./Middle_East_Airlines-Logo.wine.png" alt="" height="60px">
-                    </div>
-                    <div class="time-airline">
-                        <div class="airline">Delta Air Lines</div>
-                    </div>
-                    <div class="flight-number">DL 1234</div>
-                    <div class="departure-time">10:00 AM - <span>1:00 PM</span></div>
-                </div>
-                <div class="right-section">
-                    <div class="price">$350</div>
-                    <button class="book-button">Book Now</button>
-                </div>
-            </div>
-
-
-            <!-- add more flight here -->
         </div>
 
         <div class="pagination">
@@ -124,7 +89,7 @@
             </div>
         </div>
     </div>
-<script src="scripts.js"></script>
+<script src="../scripts/flights.js"></script>
 </body>
 
 </html>

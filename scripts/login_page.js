@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             const response = await fetch("../../../auth/signin.php",{
                 method: "POST",
-                body: JSON.stringify(payload)
+                body: payload
             })
             console.log(payload);
             console.log(await response.text());
