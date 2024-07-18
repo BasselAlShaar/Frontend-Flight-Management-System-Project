@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 check_out_date: checkout,
                 price_per_night:pricePerNight
             }
-            const response = await fetch("../../../hotels/booking.php",{
+            const response = await fetch("../../Backend-Flight-Management-System-Project/hotels/booking.php",{
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         event.preventDefault();
         const formData = new FormData(event.target);
-        const request = await fetch("../../../hotels/booking.php",{
+        const request = await fetch("../../Backend-Flight-Management-System-Project/hotels/booking.php",{
             method:"POST",
             body:{location_id:destination,
             check_in_date:checkin,
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const dest = async ()=>{
-        const request = await fetch('../../../locations/readall.php',{
+        const request = await fetch('../../Backend-Flight-Management-System-Project/locations/readall.php',{
             method:"POST"
         })
         let results = await request.json()
