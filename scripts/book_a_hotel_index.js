@@ -20,21 +20,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Form Validation Functionality
-    const form = document.querySelector('form');
+    const form = document.querySelector('.search-btn');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('click', function (event) {
         const destination = document.getElementById('destination').value;
         const checkin = document.getElementById('checkin').value;
         const checkout = document.getElementById('checkout').value;
-        const guests = document.getElementById('guests').value;
+        const pricePerNight = document.getElementById('pricePerNight').value;
 
-        if (!destination || !checkin || !checkout || !guests) {
-            alert('Please fill out all fields.');
-            event.preventDefault();
-        }
         const insert = async ()=>{
-            
+            let payload ={
+                location_id: destination,
+                check_in_date:checkin,
+                check_out_date: checkout,
+                price_per_night:pricePerNight
+            }
+            const response = await fetch("../../../hotels/booking.php",{
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            console.log(payload);
+            console.log(await response.text());
+            // let data = await response.json()
+            // console.log(data);
         }
+        insert()
+        console.log("dfuijohnguijdfg");
+
     });
 });
 
@@ -56,31 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Prevent the form from submitting the default way
         
         // Get the form values
-        const destination = document.getElementById('destination').value;
-        const checkin = document.getElementById('checkin').value;
-        const checkout = document.getElementById('checkout').value;
-        const guests = document.getElementById('guests').value;
-        const freeCancellation = document.getElementById('free-cancellation').checked;
+        
         const rating = Array.from(document.querySelectorAll('.star.selected')).map(star => star.dataset.value);
         
         // Construct the request URL with query parameters
-        const url = `../../../locations/readall.php`;
-        
-        try {
-            // Fetch data from backend
-            const response = await fetch(url);
-            // Parse JSON response
-            const data = await response.json();
-            
-            // Handle the data (update DOM, show results, etc.)
-            console.log('Received data from backend:', data);
-            // Example: Update DOM with search results
-            displaySearchResults(data); // Implement this function to display results
-            console.log(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            // Handle errors (show error message, retry options, etc.)
-        }
     });
 
     // Add click event listeners to the stars for rating selection
