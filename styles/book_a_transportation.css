@@ -131,7 +131,16 @@ form {
     /* background-color:#d1e8e4; */
      /* #ADD8E6; */
 }
-
+#pickup-date{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* background-color: #4d8b7d;  */
+    background-color: #1f4068; /* Darker blue for placeholders */
+    color: #fff; /* Text color to contrast with the background */
+    /* background-color:#d1e8e4; */
+     /* #ADD8E6; */
+}
 .search-btn {
     background-color: #0a1f44; /* Deep blue for buttons */
     color: #fff;

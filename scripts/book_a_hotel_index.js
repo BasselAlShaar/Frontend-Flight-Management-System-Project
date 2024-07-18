@@ -61,15 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const rating = Array.from(document.querySelectorAll('.star.selected')).map(star => star.dataset.value);
         
         // Construct the request URL with query parameters
-        const url = `http://localhost:3000/search?destination=${destination}&checkin=${checkin}&checkout=${checkout}&guests=${guests}&freeCancellation=${freeCancellation}&rating=${rating.join(',')}`;
+        const url = `../Backend-Flight-Management-System-Project/locations/readall.php`;
         
         try {
             // Fetch data from backend
             const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            
             // Parse JSON response
             const data = await response.json();
             
@@ -104,12 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Replace with your logic to update HTML based on backend response
         // For example, update a results section with data returned from backend
         // Example assuming you have a results div with id 'search-results'
-        const resultsContainer = document.getElementById('search-results');
+        const resultsContainer = document.getElementById('destination');
         resultsContainer.innerHTML = ''; // Clear previous results
         data.forEach(result => {
-            const resultElement = document.createElement('div');
-            resultElement.textContent = `Result: ${result.title}, ${result.description}`;
-            resultsContainer.appendChild(resultElement);
+            let option = `<option value="${result.id_location}">${result.name}</option>`;
+            resultsContainer.innerHTML += option;
         });
     }
 });

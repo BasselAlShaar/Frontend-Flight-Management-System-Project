@@ -151,6 +151,21 @@ form {
     color: #fff; /* Text color to contrast with the background */
 
 }
+#destination{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #1f4068; /* Darker blue for placeholders */
+    color: #fff; /* Text color to contrast with the background */
+
+}
+#pricePerNight{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #1f4068; /* Darker blue for placeholders */
+    color: #fff; /* Text color to contrast with the background */
+}
 #rooms{
     padding: 10px;
     border: 1px solid #ccc;
