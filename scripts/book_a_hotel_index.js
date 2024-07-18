@@ -66,6 +66,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select the search button
     const searchButton = document.querySelector('.search-btn');
 
+    document.querySelector('.search-btn').addEventListener('submit', async function(event) {
+        const destination = document.getElementById('destination').value;
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        const pricePerNight = document.getElementById('pricePerNight').value;
+
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const request = await fetch("../../../hotels/booking.php",{
+            method:"POST",
+            body:{location_id:destination,
+            check_in_date:checkin,
+            check_out_date:checkout,
+            price_per_night:pricePerNight}
+        })
+        
+        const result = await request.json()
+        console.log(result);
+    })
+
+
     // Add a click event listener to the search button
     searchButton.addEventListener('click', async (event) => {
         event.preventDefault(); // Prevent the form from submitting the default way
