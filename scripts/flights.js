@@ -2,7 +2,7 @@
 document.getElementById('form').addEventListener('submit', async function(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const request = await fetch('../../../flights/search.php', {
+    const request = await fetch('../../Backend-Flight-Management-System-Project/flights/search.php', {
         method: 'POST',
         body: formData
     })
