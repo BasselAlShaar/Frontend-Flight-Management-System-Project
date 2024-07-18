@@ -5,11 +5,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
         console.log('Form submitted');
 
-        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        console.log('Username:', username);
+        console.log('email:', email);
         console.log('Password:', password);
+
+        const insert = async ()=>{
+            let payload ={
+                email,
+                password,
+            }
+            const response = await fetch("../../../auth/signin.php",{
+                method: "POST",
+                body: JSON.stringify(payload)
+            })
+            console.log(payload);
+            console.log(await response.text());
+            // let data = await response.json()
+            // console.log(data);
+        }
+        insert()
 
     });
     document.getElementById('logo').addEventListener('click', function() {
